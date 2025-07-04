@@ -1,0 +1,21 @@
+<div class="verificar-form">
+  <h2>Verificar Inscripción</h2>
+
+  <form (ngSubmit)="verificarInscripcion()">
+    <div>
+      <label for="dni">DNI del socio</label>
+      <input id="dni" name="dni" [(ngModel)]="dni" required />
+    </div>
+
+    <div>
+      <label for="actividad">Nombre de la actividad</label>
+      <input id="actividad" name="actividad" [(ngModel)]="actividad" required />
+    </div>
+
+    <button type="submit">Verificar</button>
+  </form>
+
+  <div *ngIf="mensaje" style="margin-top: 1rem; text-align: center; color: #1976d2;">
+    {{ mensaje }}
+  </div>
+</div>
